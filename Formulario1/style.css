@@ -1,0 +1,38 @@
+h1 {    
+    text-align: center;
+    color:darkblue    
+}
+
+.boton1{
+    color: white;
+    background-color:crimson;
+    width: 200px;
+    height: 40px;
+    text-align: center;  
+    position: relative;
+    left: 40%;    
+}
+
+.boton2{
+    color: white;
+    background-color:blue;    
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    position:relative;
+    left: 40%    
+    
+}
+
+.formulario {
+    font-size:large;
+    background-color:blanchedalmond;
+}
+
+h1{
+    background-color:wheat;
+}
+
+body{
+    background-color: peachpuff;
+}

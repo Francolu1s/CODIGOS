@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<script type="text/javascript">
+
+    var nombre = 'Reyner'
+    console.log(typeof nombre)
+    console.log(nombre.length)
+
+    var semana = []
+    console.log(typeof semana)
+    console.log(semana.length)
+
+    semana.push("Lunes")
+    semana.push("martes")
+
+    semana.push("Miercoles")
+    console.log(semana)
+    console.log(semana.length)
+    semana.push("Jueves", "Viernes")
+    console.log(semana)
+    var dia = 'Sabado'
+    semana.push(dia)
+    dia = 'Domingo'
+    semana.push(dia)
+    console.log(semana)
+
+    // semana=[]
+    // console.log(semana)
+
+
+    semana.forEach(function (x) {
+
+        console.log(x)
+        if (x == "Sabado") {
+            console.log("Es lunes festivo no trabajo!!!!")
+
+
+        }
+
+
+    })
+
+    for (x in semana) {
+        console.log(x)
+
+
+
+    }
+
+    Tripulante = { "Nombre": "Reyner", "Pass": "123" }
+
+    console.log(Tripulante)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

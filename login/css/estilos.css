@@ -1,0 +1,71 @@
+/*p, h2{color: red;}
+
+#conID{
+border-style: dashed;
+width: ;
+
+}
+
+.conClases{
+border-style: dotted;
+
+
+}*/
+
+#contenido1
+{
+/*border-style: dashed;*/
+width:30% ;
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background-color: lightblue;
+}
+#contenido2{
+/*border-style: dotted;*/
+width: 70%;
+position: absolute;
+right: 0;
+top: 0;
+height: 100%;
+}
+#parrofo3{
+/*width: 30%;
+position: absolute;
+*/
+/*border-style: dashed;*/
+text-align: center;
+}
+#parrofo1{
+width: 30%;
+position: absolute;
+margin-left: 100px;
+/*border-style: dashed;*/
+margin-top: 20px;
+text-align: center;
+}
+
+
+#parrofo2{
+/*border-style: dotted;*/
+width: 30%;
+/*float: right;*/
+margin-right: 100px;
+margin-top: 20px;
+/*margin: 30px 200px 10px 0px ;*/
+position: absolute;
+right: 0;
+text-align: center;
+}
+
+.logo{
+width: 100px;
+
+}
+#bt_registro
+{
+	position: absolute;
+	bottom: 0;
+left: 30%;
+}

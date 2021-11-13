@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+p{
+    color: navy;
+}
+
+body{
+    margin: 2%;
+    display: flex;
+}
+
+h2{
+    color: blue;
+}
+
+h1{
+    color: red;
+}
+
+aside{
+    border-style: dashed;
+    width: 25%;
+}
+
+main{
+    border: 3px green solid;
+    width: 75%;
+}
+
+section{    
+    border: 5px blue dashed;
+    justify-content: center;
+}
+
+#columnas{
+    flex-wrap: wrap;
+}
+
+input{
+    margin: 1%;
+    width: 50%;
+}
