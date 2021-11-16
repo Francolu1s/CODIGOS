@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRAR</title>
+    <link rel="stylesheet" href="./Registrar.css">
+</head>
+<body>
+    <nav>
+        <input type="submit" id="btnIncio" value="Inicio" onclick="ir_inicio()">
+        <input type="submit" id="btnIniciarSesion" value="Iniciar Sesion" onclick="ir_inciar_sesion()">
+    </nav>    
+    <div class="contenedor">
+        <form id="formulario" action="">
+
+            <label class="entrada" for="txt_name">Nombres: </label>
+            <input class="entrada" type="text" id="txt_name" placeholder="Nombres">
+            <label class="entrada" for="txt_lastname">Apellidos: </label>
+            <input class="entrada" type="text" id="txt_lastname" placeholder="Apellidos">
+            <label class="entrada" for="txt_email">Correo electronico: </label>
+            <input class="entrada" type="text" id="txt_email" placeholder="Correo electronico">
+            <label class="entrada" for="Fecha_Nacimiento">Fecha de nacimiento: </label>
+            <input class="entrada" type ="date" placeholder="Fecha_Nacimiento"  id="Fecha_Nacimiento">
+            <label class="entrada" for="txt_password">Contraseña: </label>
+            <input class="entrada" type="password" id="txt_password" placeholder="Contraseña">
+            <input class="entrada" id="btnRegistar" type="button" value="Registrar" onclick="registar_Usuario()">
+
+        </form>
+    </div>
+    <script src="aplicacion.js"></script>
+</body>
+</html>

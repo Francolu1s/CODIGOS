@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10%;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    align-self: stretch;
+}
+
+label{
+    font-size: large;
+}
+
+.contenedor{
+    border-radius: 20px;
+    background-color: rgb(39, 161, 177);
+    justify-content: center;
+    padding: 30%;
+}
+
+.entrada{
+    height: 25px;
+    width: 90%;
+    margin: 4%;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#btnIncio, #btnIniciarSesion{
+    width: 49%;
+    background-color:rgb(111, 231, 127);
+    border-radius: 10px;
+    height: 50%;
+}
+
+#btnRegistar{
+    background-color: rgb(76, 48, 231);
+    color:beige;
+}

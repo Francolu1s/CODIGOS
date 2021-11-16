@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <nav>
+        <input type="submit" id="btnIncio" value="Inicio" onclick="ir_inicio()">
+        <input type="submit" id="btnRegistrar" value="Registrar" onclick="ir_registro()">
+    </nav>    
+    <div class="contenedor">
+        <form id="formulario" action="">     
+            <label class="entrada" for="txt_email">Correo electronico: </label>
+            <input class="entrada" type="text" id="txt_email" placeholder="Correo electronico">      
+            <label class="entrada" for="txt_password">Contraseña: </label>
+            <input class="entrada" type="password" id="txt_password" placeholder="Contraseña">
+            <input class="entrada" id="btnInciciarSesion" type="button" value="Iniciar Sesion" onclick="comprobar_Datos()">
+
+        </form>
+    </div>
+    <script src="aplicacion.js"></script>
+</body>
+</html>

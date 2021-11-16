@@ -4,7 +4,7 @@ var numerico = /^[0-9]*$/;
 
 var caracter = /^[a-z A-Z 0-9]*$/;
 
-var correo_patron=/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+var correo_patron=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
 function validar(){
     var nombre = document.getElementById('Nombre').value;    
