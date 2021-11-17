@@ -3,7 +3,8 @@ var correo_patron = /^([\da-z A-Z\.-]+)@([\da-z A-Z\.-]+)\.([a-z A-Z\.]{2,30})$/
 var clave_patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,20}/;
 //-------------------------- expresiones regulares
 
-var datosArray = [];
+let memArray = JSON.parse(localStorage.getItem("Registro")) || [];
+var datosArray =[];
 console.log(datosArray);
 
 function registar_Usuario() {
@@ -13,7 +14,7 @@ function registar_Usuario() {
     var fechaNacimiento = document.getElementById('Fecha_Nacimiento').value;
     var password = document.getElementById('txt_password').value;
 
-    var rta_correo = correo_patron.test(correo);
+    var rta_correo = correo_patron.test(correo);            //verificacion expresiones regulares.
     var rta_clave = clave_patron.test(password);
 
     if (nombre != '') {
@@ -23,21 +24,22 @@ function registar_Usuario() {
                     console.log('correo correcto');
                     if (fechaNacimiento != '') {
                         if (password != '') {
-                            if (rta_clave) {
-
+                            if (rta_clave) {                            
+                                
                                 var persona = {
                                     "name": nombre,
                                     "lastname": apellido,
                                     "email": correo,
                                     "fechaNa": fechaNacimiento,
-                                    "contraseña": password
+                                    "clave": password
                                 };
                                 console.log(persona);
-
                                 datosArray.push(persona);
-                                alert('Registro realizado correctamente')
-                                limpiarFormulario();
-                                console.log(datosArray);
+                                let memArray = JSON.stringify(datosArray);                                
+                                localStorage.setItem("Registro", memArray);
+                                alert ('Registro realizado correctamente');
+                                document.getElementById("formulario").reset();                                                       
+                                console.log(datosArray);                        
 
                             } else {
                                 alert('Contraseña debe contener Mayusculas, minusculas, numeros y caracter especial')
@@ -60,10 +62,6 @@ function registar_Usuario() {
     } else {
         alert('Nombres no puede estar en blanco');
     }
-}
-
-function limpiarFormulario() {
-    document.getElementById("formulario").reset();
 }
 
 //   ------------------------Ir al incico
@@ -89,7 +87,7 @@ function ir_inciar_sesion() {
 function comprobar_Datos() {
     var correo = document.getElementById('txt_email').value;
     var password = document.getElementById('txt_password').value;
-
+    var bandera = false;
     var rta_correo = correo_patron.test(correo);
     var rta_clave = clave_patron.test(password);
 
@@ -97,11 +95,20 @@ function comprobar_Datos() {
         if (rta_correo) {
             console.log('Correo Correcto');
             if (password != '') {
-                if (correo == 'franco.luis@live.com' && password == 'Klave$123') {
-                    location.href = 'https://sso.upb.edu.co/authenticationendpoint/login.do?commonAuthCallerPath=%2Fsamlsso&forceAuth=false&passiveAuth=false&tenantDomain=carbon.super&sessionDataKey=42c8e0a2-3f5e-411e-8958-a0de86d62661&relyingParty=https%3A%2F%2F105c05bd-2461-421a-88e8-ec1d4021ec2d.tenants.brightspace.com%2FsamlLogin&type=samlsso&sp=d2l&isSaaSApp=false&authenticators=BasicAuthenticator:LOCAL';
-                } else {
-                    alert('Correo o contraseña Incorrecto');
-                }
+                datosArray = memArray;
+                console.log(datosArray);
+                datosArray.forEach(function(x){
+                    if (correo == x.email && password == x.clave) {                                            
+                        bandera = true;                                                                      
+                    } else{
+                        console.log('Datos Incorrectos');
+                    }
+                } )
+                    if (bandera == true) {
+                        location.href = 'https://www.misiontic2022.gov.co/portal/';
+                    } else {
+                        alert('Correo o contraseña Incorrecto');
+                    }                
             } else {
                 alert('Contraseña no puede estar en blanco');
             }
